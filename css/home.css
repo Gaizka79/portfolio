@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Exo', sans-serif;
+}
+
+
+/********* HAMBURGUESA **************/
+
+.main-header {
+  background-color: #8f94fb; 
+  /* height: 50px; */
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 0 0.4rem;
+}
+
+.main-nav {
+  /* position: fixed;  */
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  height: 90vh; 
+  width: 100%;
+  margin-top: -250%;
+
+  transition: all 0.8s linear;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  flex-basis: 70%;
+  
+}
+  
+.main-nav.show {
+  margin-top: 0;
+}
+
+.nav-links {
+  /* background-color: rgb(250, 250, 250); */
+  background-color: #8f94fb;
+
+  display: flex;
+  /* flex-direction: column; */
+  width: 100%;
+  height: 15%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* background: white; */
+  align-items: center; 
+}
+  
+.link-item {
+  margin-top: 3rem;
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+.button-menu {
+  z-index: 200;
+  width: 40px;
+  height: 40px;
+  border: none;
+  display: flex;
+  background: none;
+  flex-direction: column; /* Pondrá un span debajo del otro*/
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  
+
+  /* display: none; */
+}
+  
+/* 
+  Dibujamos una línea recta por cada span creando el tipico menu hamburguesa
+*/
+  
+.button-menu span {
+  width: 37px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background:white;
+  border-radius: 3px;
+  transform-origin: 4px 0px;
+  transition: all 0.2s linear;
+  
+}
+  
+/* 
+  con los span dibujamos un icono de cerrar 
+  para mostrar cuándo la navegación este abierta 
+*/
+  
+.button-menu.close span {
+  opacity: 1;
+  transform: rotate(45deg) translate(0px, 0px);
+  background: #ffffff;
+}
+
+.button-menu.close span:nth-child(2) {
+  transform: rotate(-45deg) translate(-8px, 5px);
+}
+
+.button-menu.close span:nth-child(3) {
+  display: none;
+}
+ 
+.link-item::after {
+  position: absolute;
+  content: "";
+  /* background-color: black; */
+  background-color: white;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  transition: 0.3s ease all;
+}
+
+.link-item:hover::after {
+  width: 100%;
+}
+
+/*******  **********/
+
+.home{
+  height: 100vh;
+}
+
+.context {
+  width: 100%;
+  position: absolute;
+  top:20vh;  
+  overflow: hidden;
+
+  height: 88vh;
+}
+
+.context h1{
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+}
+
+.context p{
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+}
+
+/******* BACKGROUND *********/
+
+.area{
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    /* height:88vh; */   
+    /* height: 100vh; */
+    height: 300vh;
+    
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 108%; */
+    height: 308vh;
+    overflow: hidden;
+}
+
+.circles li{
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 35s linear infinite;
+  bottom: -150px; 
+}
+
+.circles li:nth-child(1){
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2){
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0%{
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100%{
+    /* transform: translateY(-1000px) rotate(720deg); */
+    transform: translateY(-2500px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+/***********************/
+
+.foto {
+  width: 10%;
+  height: auto;
+}
+img {
+  width: 30%;
+  height: auto;
+}
+
+.imagen {
+  width: 100px;
+  height:100px;
+  border-radius:150px;
+  border: 2px  solid #666;
+  margin-top: 10px;
+}
+
+.foto {
+  display: block;
+  margin: auto;
+}
+
+/********* **********/
+
+
+
+/***** PORTFOLIO ******/
+
+.portfolio{
+  height: 100vh;
+  /* background-color: blue; */
+  width: 100%;
+  
+}
+
+.trabajos{
+  height: 95vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+
+  
+}
+
+.trabajos article{
+  background-color: #8f94fb;
+  width: 35%;
+  position: relative;
+  display: block;
+  color: white;
+
+  border-style:groove;
+  border-color: #4e54c8;
+  border-radius: 0.5em;
+  /* box-shadow: 5px 5px 10px #8f94fb; */
+  
+  padding: 2em;
+  margin: 2em;
+
+  text-align: center;
+
+  opacity: 0.7;
+}
+
+.trabajos article:hover{
+  box-shadow: 15px 15px 50px #8f94fb;
+}
+
+.trabajos article .NYT_img {
+  width: 50%;
+  height: auto;
+
+  margin: 2em;
+}
+/* .trabajos article a b{
+  margin-top: 2em;
+  
+}
+.trabajos article .link b{
+  margin-top: 20em;
+  color: aqua;
+} */
+.link{
+  margin-top: 2em;
+} 
+.WebPage{
+  margin-top: 20em;
+}
+.trabajo1{
+  /* top: 10%; */
+
+
+}
+.trabajo2{
+
+}
+
+.logo_github{
+  width: 1em;
+  height: auto;
+  
+
+  margin-top: 2em;
+}
+
+/****** ABOUT *******/
+
+.about{
+  height: 96vh;
+  /* background-color: pink; */
+}
+
+/**************************/
+
+.to_top{  /* Botón para subir arriba */
+  height: 10vh;
+  width: auto;
+  
+  position: fixed;
+  color: white;
+
+  right: 10px;
+  bottom: 35px;
+  z-index: 300;
+}
+
+.footer {
+  background-color: #8f94fb; 
+  /* position: absolute; */
+  width: 100%;
+  height: 4vh;
+  /* position: fixed; */
+  bottom: 0;
+  
+
+}
+.text_footer {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+
+/****** RESPONSIVE  *******/
+
+@media only screen and (max-width: 400px) {
+	/* Mugikorra */
+  .context{
+    overflow: scroll;
+  }
+	body {
+		height: auto;
+		color: black;
+		overflow: auto;
+	}
+	body div {font-size: small;}
+	body section div {max-width: 90%;}
+}

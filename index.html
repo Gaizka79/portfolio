@@ -5,53 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaizka Arrondo</title>
-    <link rel="stylesheet" href="./css/style3.css">
+    <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/normalize.css">
 </head>
 <body>
+  <a name="top"></a>
   <header class="main-header">
     <!-- //<a class="main-logo" href="https://progradudi.netlify.app">
-      //<strong>Gaizka</strong> -->
-    </a> 
+      //<strong>Gaizka</strong></a>  -->
+    
     <nav id="nav" class="main-nav">
       <div class="nav-links">
         <a class="link-item" href="#">Home</a>
-        <a class="link-item" href="./pages/portfolio.html">Porfolio</a>
-        <a class="link-item" href="#">Link3</a>
-        <a class="link-item" href="#">About</a>
+        <a class="link-item" href="#portfolio">Porfolio</a>
+        <!-- <a class="link-item" href="#">Link3</a> -->
+        <a class="link-item" href="#about">About</a>
       </div>
     </nav>
-      <button id="button-menu" class="button-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </header> 
-    
-  
+    <button id="button-menu" class="button-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header> 
     
   <main class="main">
-    
-    <div class="context">
-      <h1>&ltHello World/&gt; I'm Gaizka Arrondo</h1>
-      <p>a junior Full Stack Developer based in Bilbao,</p><br>
-      <p>Basque Country</p>
+    <div class="to_top_button">
+      <a href="#top"><img src="./assests/img/nuevoTop.png" alt="to_top_button" class="to_top"></a>
     </div>
-    <div class="area" >
-      <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div > 
+    <section class="home">
+      <div class="context">
+        <h1>&ltHello World/&gt; I'm Gaizka Arrondo</h1>
+        <p>a junior Full Stack Developer based in Bilbao,</p><br>
+        <p>Basque Country</p>
+        <div class="foto">
+          <img src="./assests/img/begbie.jpg" alt="personal_foto" class="imagen">
+        </div>
+      </div>
+      <div class="area" >
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div > 
+    </section>
 
+    <section class="portfolio">
+      <a name="portfolio"></a>
+      <h2>Personal portfolio</h2>
+      <p>Here we have some of my works...</p>
+      <div class="trabajos">
+        <article class="trabajo1">
+          <h3>The New York Times library</h3>
+          <img src="./assests/img/new_york_times.png" alt="Library_img" class="NYT_img">
+          <p><b>Using The New York Times API, we obtain a collection of best-selling books ordered by category</b></p>
+          <div class="link">
+            <a href="https://gaizka79.github.io/The-New-York-Times-Library/" target="_blank" class="link"><strong>Go to WebPage</strong></a>
+          </div>
+          <div class="github">
+            <img src="./assests/img/GitHub-Mark-120px-plus.png" alt="logo_GitHub" class="logo_github">
+            <a href="https://github.com/Gaizka79/The-New-York-Times-Library.git" target="_blank"><b>Check the repo</b></a>
+          </div>
+        </article>
+
+        <article class="trabajo2">
+          <h3>Butchery SPA</h3>
+          <p><b>Butchery SPA using REACT</b></p>
+          <div class="link">
+            <a href="https://papaya-sprinkles-cbaa5d.netlify.app/" target="_blank" class="link"><strong>Go to WebPage</strong></a>
+          </div>
+          <div class="github">
+            <img src="./assests/img/GitHub-Mark-120px-plus.png" alt="logo_GitHub" class="logo_github">
+            <a href="https://github.com/Gaizka79/denda.git" target="_blank"><b>Check the repo</b></a>
+          </div>
+        </article>
+
+        <article class="trabajo3">
+          <h3>este es el trabajo3</h3>
+        </article>
+        <article class="trabajo4">
+          <h3>este es el trabajo4</h3>
+        </article>
+      </div>
+    </section>
+    <section class="about">
+      <a name="about"></a>
+      <h2>ABOUT</h2>
+    </section>
 
   </main>
   <footer class="footer">
