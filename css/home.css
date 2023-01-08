@@ -159,9 +159,8 @@ body{
     background: #4e54c8;  
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
     width: 100%;
-    /* height:88vh; */   
-    /* height: 100vh; */
-    height: 353vh;
+    /* height: 353vh; */
+    height: 351vh;
     
 }
 
@@ -170,8 +169,8 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    /* height: 108%; */
-    height: 365vh;
+    /* height: 365vh; */
+    height: 362vh;
     overflow: hidden;
 }
 
@@ -302,7 +301,10 @@ img {
 }
 
 /********* **********/
-.title, .about {margin-left: 1em}
+.title, .about {
+  margin-left: 1em;
+  color:white;
+}
 
 
 /***** PORTFOLIO ******/
@@ -357,9 +359,6 @@ img {
   width: auto;
 }
 
-.link{
-  margin-top: 2em;
-} 
 .WebPage{
   margin-top: 20em;
 }
@@ -367,15 +366,67 @@ img {
 .logo_github{
   width: 1em;
   height: auto;
-  
-  margin-top: 1em;
 }
+.github{margin-top: 1em}
 
 /****** ABOUT *******/
 
 .about{
-  height: 98vh;
+  /* height: 98vh; */
+  height: 96vh;
   margin-top: 2em;
+  
+}
+.about_container {
+  display: flex;
+  margin-top: 6em;
+}
+
+/* .foto_about {
+  width: 100vh;
+  height: auto;
+} */
+.imagen_about {
+  display:inline-block;
+  max-height: 50vh;
+  border-radius: 1em;
+  opacity: 1;
+  z-index: 300;
+  /* width: 25vh;
+  height: 25vh; */
+}
+
+.text {
+  text-align: center;
+  font-size:larger;
+  padding: 2em;
+  line-height: 1.5em;
+}
+
+.contact{margin: 2em 1em}
+.contact_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cv{
+  z-index: 1;
+  height: 1em;
+  margin-top: 1em;
+  text-decoration: none;
+  color:white;
+}
+.cv:hover{color:blue}
+
+.link{
+  text-decoration: none;
+  color:white;
+  margin-top: 1em;
+}
+.link:hover{
+  color:blue;
+  z-index: 1;
 }
 
 /**************************/
@@ -406,7 +457,39 @@ img {
 
 /****** RESPONSIVE  *******/
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 650px){
+  .trabajos article{
+    background-color: #8f94fb;
+    width: 35%;
+    max-height: 60vh;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    font-size: small;
+    
+    padding: 2em;
+    margin: 2em;
+  }
+  
+  .trabajos article:hover{
+    box-shadow: 15px 15px 50px #8f94fb;
+  }
+  
+  .trabajos article .NYT_img {
+    width: 50%;
+    height: auto;
+  
+    margin: 2em 2em 0em 2em;
+  }
+  
+  .skill {
+    height: 2em;
+    width: auto;
+  }
+  
+}
+
+@media only screen and (max-width: 450px) {
 	/* Mugikorra */
   
 	body {
@@ -451,4 +534,42 @@ img {
   .area{height: 403vh}
   .circles{height: 415vh}
   .portfolio{height: 200vh}
+
+
+  /* ABOUT */
+  .about{height: 98vh}
+  .about_container {
+    max-height: 77vh;
+    display: flex;
+    margin-top: 1em;
+    overflow: hidden;
+  }
+
+  /* .foto_about {
+    width: 100vh;
+    height: auto;
+  } */
+  .imagen_about {display: none}
+
+  .text {
+    text-align: center;
+    font-size:medium;
+    padding: 2em;
+    line-height: 1.5em;
+  }
+
+  .contact{margin: 2em 1em}
+  .contact_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .cv{
+    z-index: 1;
+    height: 1em;
+    margin-top: 1em;
+    text-decoration: none;
+    color:white;
+  }
 }
