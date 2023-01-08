@@ -280,10 +280,9 @@ body{
 .foto {
   width: 10%;
   height: auto;
-  
 }
 img {
-  width: 30%;
+  width: 100%;
   height: auto;
 }
 
