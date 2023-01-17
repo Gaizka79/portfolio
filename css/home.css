@@ -353,9 +353,9 @@ img {
   margin: 2em 2em 0em 2em;
 }
 
-article.trabajo4{
+/* article.trabajo4{
   display: none;
-}
+} */
 
 .skill {
   height: 2em;
@@ -485,9 +485,9 @@ article.trabajo4{
     margin: 2em 2em 0em 2em;
   }
 
-  article.trabajo4{
+ /*  article.trabajo4{
     display: none;
-  }
+  } */
   
   .skill {
     height: 2em;
@@ -537,9 +537,9 @@ article.trabajo4{
   
   opacity: 0.7;
   }
-  article.trabajo4{
+ /*  article.trabajo4{
     display: none;
-  }
+  } */
 
   .area{height: 403vh}
   .circles{height: 415vh}
